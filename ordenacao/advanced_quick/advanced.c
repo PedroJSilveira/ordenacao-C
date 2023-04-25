@@ -79,16 +79,6 @@ void quick(int *vet, int inicio, int fim){
             posPivo = particiona(vet, inicio, fim);
             quick(vet, inicio, posPivo - 1);
             quick(vet, posPivo + 1, fim);
-
-            //verifica se o lado esquerdo ficou menor que o lado direito do vetor em relação ao pivo
-            if (posPivo - inicio < fim - posPivo){
-                quick(vet, inicio, posPivo - 1);
-                inicio = posPivo + 1;
-            }
-            else{
-                quick (vet, posPivo + 1, fim);
-                fim = posPivo - 1;
-            } 
         }
     }
 }
